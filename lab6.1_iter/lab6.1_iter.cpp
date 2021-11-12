@@ -37,19 +37,20 @@ using namespace std;
 	}
 
 	void Replace(int* a, const int size) {
-		cout << "{";
+		
 		for (int i = 0; i < size; i++) {
 			if (a[i] < 0 || a[i] % 2 != 0) {
 				a[i] = 0;
 				
 			}
-			cout << setw(4) << a[i];
+		
 		}
-		cout << " }" << endl;
+		
 
 	}
 int main()
 {
+	srand((unsigned)time(NULL));
 	const int  b = 24;
 	int a[b];
 	int low = -50;
@@ -63,7 +64,7 @@ int main()
 	cout << "Sum " << Sum(a, b) << endl;
 
 	Replace(a, b);
-	
+	PrintArray(a, b);
 	return 0;
 }
 
